@@ -51,3 +51,35 @@ function getRandomColor() {
   const hue = 290 + Math.random() * 260;
   return "hsl(" + hue + ", 100%, 60%)";
 }
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function getRandomElements(array, count) {
+  const shuffledArray = shuffleArray([...array]);
+  return shuffledArray.slice(0, count);
+}
+
+function getRandomLane() {
+  let x = -100 + Math.random() * 100;
+  x = Math.floor(x / 10) * 100;
+  return x;
+}
+
+function fillWithUniqueLanes(rane, count) {
+  if (rane.length >= count) {
+    return;
+  }
+
+  let randomLane = getRandomLane();
+  if (!rane.includes(randomLane)) {
+    rane.push(randomLane);
+  }
+
+  fillWithUniqueLanes(rane, count); // Recursive call
+}
