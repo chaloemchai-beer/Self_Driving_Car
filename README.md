@@ -11,7 +11,7 @@ This project is focused on the implementation of Neural Networks using JavaScrip
 ## Features
 The car is capable of learning through the principles of Neural Network and Genetic Algorithm using the car's sensors.
 
-![Alt text]("./output.png" "Optional title")
+![Alt text]("output.png" "Optional title")
 
 ## Getting Started
 git clone https://github.com/chaloemchai-beer/Self_Driving_Car.git
